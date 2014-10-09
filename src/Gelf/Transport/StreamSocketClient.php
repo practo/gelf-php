@@ -109,14 +109,15 @@ class StreamSocketClient
      */
     public function getSocket()
     {
-        // lazy initializing of socket-descriptor
-        if (!$this->socket) {
-            $this->socket = self::initSocket(
-                $this->scheme, 
-                $this->host, 
-                $this->port
-            );
-        }
+        /* TODO Reuse stream connection
+         * In case of chunked messsage the connection is closed immediately
+         * as a result subsequent chunks are not send and throws a notice
+         */
+        $this->socket = self::initSocket(
+            $this->scheme,
+            $this->host,
+            $this->port
+        );
 
         return $this->socket;
     }
