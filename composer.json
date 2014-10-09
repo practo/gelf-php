@@ -1,11 +1,11 @@
 {
-    "name": "graylog2/gelf-php",
+    "name": "practo/gelf-php",
     "description": "A php implementation to send log-messages to a GELF compatible backend like Graylog2.",
     "license": "MIT",
     "authors": [
         {
-            "name": "Benjamin Zikarsky",
-            "email": "benjamin@zikarsky.de"
+            "name": "Abhinav Lal"
+            "email": "abhinav.lall@gmail.com"
         }
     ],
     "require": {
